@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>EasySpeak English Course</title>
+    <meta name="description" content="EasySpeak English Course: kursus bahasa Inggris untuk anak, remaja, dan dewasa. Speaking-focused, interaktif, online & offline, level A1 hingga B2+." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --navy: #0b1630;
+        --royal: #174ea6;
+        --electric: #3b82f6;
+        --bg: #fff;
+        --alt: #f3f6fc;
+        --text: #111827;
+        --muted: #4b5563;
+        --card: #fff;
+        --line: #e3e9f5;
+        --shadow: 0 10px 30px rgba(11, 22, 48, 0.08);
+        --r: 20px;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0a1226;
+          --alt: #0f1a35;
+          --text: #eef2fb;
+          --muted: #a9b6d3;
+          --card: #13203f;
+          --line: #223158;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0a1226;
+        --alt: #0f1a35;
+        --text: #eef2fb;
+        --muted: #a9b6d3;
+        --card: #13203f;
+        --line: #223158;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 84px;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        line-height: 1.15;
+        margin: 0;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1160px;
+        margin: auto;
+        padding: 0 20px;
+      }
+      section {
+        padding: 80px 0;
+      }
+      .alt {
+        background: var(--alt);
+      }
+      .eyebrow {
+        color: var(--electric);
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .sh {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 48px;
+      }
+      .sh h2 {
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 800;
+        margin: 8px 0 12px;
+      }
+      .sh p {
+        color: var(--muted);
+        margin: 0;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        border: 2px solid transparent;
+        cursor: pointer;
+        font:
+          600 1rem Inter,
+          sans-serif;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          background 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn:active {
+        transform: scale(0.97);
+      }
+      .btn-p {
+        background: linear-gradient(135deg, var(--electric), var(--royal));
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(59, 130, 246, 0.4);
+      }
+      .btn-o {
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+      }
+      .btn-o:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .btn-l {
+        background: #fff;
+        color: var(--navy);
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(11, 22, 48, 0.88);
+        backdrop-filter: blur(12px);
+        color: #fff;
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      nav .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font:
+          800 1.15rem "Plus Jakarta Sans",
+          sans-serif;
+      }
+      .logo img {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+      .logo i {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--electric), var(--royal));
+        display: grid;
+        place-items: center;
+        font-style: normal;
+      }
+      .links {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+        font-size: 0.93rem;
+      }
+      .links a:not(.btn) {
+        opacity: 0.85;
+      }
+      .links a:not(.btn):hover {
+        opacity: 1;
+      }
+      .links .btn {
+        padding: 9px 20px;
+        font-size: 0.9rem;
+      }
+      .burger {
+        display: none;
+        background: none;
+        border: 0;
+        color: #fff;
+        font-size: 1.7rem;
+        cursor: pointer;
+      }
+      .hero {
+        background: radial-gradient(900px 500px at 85% 10%, rgba(59, 130, 246, 0.45), transparent 60%), linear-gradient(160deg, var(--navy), #10265a);
+        color: #fff;
+        padding: 80px 0 90px;
+        overflow: hidden;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 5.5vw, 4rem);
+        font-weight: 800;
+      }
+      .hero h1 span {
+        background: linear-gradient(90deg, #8bb8ff, #fff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero h3 {
+        font-weight: 600;
+        font-size: 1.15rem;
+        margin: 18px 0 10px;
+        color: #cfe0ff;
+      }
+      .hero p {
+        color: #b9c8e8;
+        max-width: 520px;
+      }
+      .cta {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 28px 0;
+      }
+      .hl {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .hl span {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+      }
+      .vis {
+        position: relative;
+        min-height: 400px;
+      }
+      .vcard {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.96);
+        color: var(--navy);
+        border-radius: 22px;
+        padding: 16px 18px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        max-width: 300px;
+        animation: fl 6s ease-in-out infinite;
+      }
+      .vcard b {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--royal);
+      }
+      .vcard small {
+        font-size: 0.92rem;
+        line-height: 1.35;
+        display: block;
+      }
+      .av {
+        flex: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 700;
+      }
+      .vcard:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+      .vcard:nth-child(2) {
+        top: 105px;
+        right: 0;
+        animation-delay: -2s;
+      }
+      .vcard:nth-child(3) {
+        top: 215px;
+        left: 20px;
+        animation-delay: -4s;
+      }
+      .vcard:nth-child(4) {
+        top: 318px;
+        right: 10px;
+        animation-delay: -1s;
+      }
+      @keyframes fl {
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .vnote {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        font-size: 0.72rem;
+        color: #8fa6d4;
+      }
+      .grid {
+        display: grid;
+        gap: 22px;
+      }
+      .g3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .g4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--r);
+        padding: 28px;
+        box-shadow: var(--shadow);
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--electric);
+        box-shadow: 0 18px 40px rgba(59, 130, 246, 0.2);
+      }
+      .photo {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: linear-gradient(135deg, #174ea6, #3b82f6);
+        display: grid;
+        place-items: center;
+        color: #dbe8ff;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 16px;
+      }
+      .photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .card:hover .photo img,
+      .method:hover .photo img {
+        transform: scale(1.06);
+      }
+      .card:has(.photo) {
+        padding: 14px 14px 24px;
+      }
+      .card:has(.photo) h3,
+      .card:has(.photo) p,
+      .card:has(.photo) ul {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .card:has(.photo) h3 {
+        margin-top: 2px;
+      }
+      .vis .photo {
+        position: absolute;
+        inset: 0;
+        aspect-ratio: auto;
+        border-radius: 28px;
+        margin: 0;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      }
+      .vcard {
+        z-index: 2;
+      }
+      .ic {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--electric), var(--royal));
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+      }
+      .card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+      }
+      .card p {
+        color: var(--muted);
+        margin: 0;
+        font-size: 0.95rem;
+      }
+      .tog {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px;
+        width: max-content;
+        margin: -20px auto 36px;
+      }
+      .tog button {
+        border: 0;
+        background: none;
+        color: var(--text);
+        padding: 9px 22px;
+        border-radius: 999px;
+        font:
+          600 0.9rem Inter,
+          sans-serif;
+        cursor: pointer;
+      }
+      .tog button.on {
+        background: linear-gradient(135deg, var(--electric), var(--royal));
+        color: #fff;
+      }
+      .pc {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .pc.pop {
+        border: 2px solid var(--electric);
+        transform: translateY(-8px);
+      }
+      .badge {
+        position: absolute;
+        top: -13px;
+        right: 20px;
+        background: linear-gradient(135deg, var(--electric), var(--royal));
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 999px;
+      }
+      .lv {
+        font:
+          800 0.8rem "Plus Jakarta Sans",
+          sans-serif;
+        color: var(--electric);
+        letter-spacing: 0.08em;
+      }
+      .pc h3 {
+        font-size: 1.4rem;
+        margin: 4px 0;
+      }
+      .tag {
+        color: var(--royal);
+        font-weight: 600;
+        font-size: 0.92rem;
+        margin-bottom: 10px;
+      }
+      .dark-tag {
+        color: var(--electric);
+      }
+      .pc ul {
+        list-style: none;
+        padding: 0;
+        margin: 14px 0;
+        flex: 1;
+      }
+      .pc li {
+        padding: 5px 0 5px 26px;
+        position: relative;
+        font-size: 0.92rem;
+      }
+      .pc li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--electric);
+        font-weight: 700;
+      }
+      .price {
+        border-top: 1px dashed var(--line);
+        padding-top: 14px;
+        margin-bottom: 14px;
+      }
+      .price strong {
+        font:
+          800 1.5rem "Plus Jakarta Sans",
+          sans-serif;
+      }
+      .price span {
+        display: block;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .pc .btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .fac .card {
+        padding: 22px;
+      }
+      .steps {
+        counter-reset: s;
+      }
+      .how {
+        position: relative;
+        text-align: center;
+      }
+      .how .n {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--electric), var(--royal));
+        color: #fff;
+        font:
+          800 1.4rem "Plus Jakarta Sans",
+          sans-serif;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 16px;
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+      }
+      .how h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+      }
+      .how p {
+        color: var(--muted);
+        font-size: 0.93rem;
+        margin: 0;
+      }
+      .method .photo {
+        aspect-ratio: 1/1;
+        margin-bottom: 12px;
+      }
+      .method {
+        background: linear-gradient(160deg, var(--navy), #10265a);
+        color: #fff;
+        border-radius: var(--r);
+        padding: 30px 24px;
+        transition: transform 0.25s;
+      }
+      .method:hover {
+        transform: translateY(-6px) rotate(-0.6deg);
+      }
+      .method b {
+        font:
+          800 1.6rem "Plus Jakarta Sans",
+          sans-serif;
+        display: block;
+        color: #8bb8ff;
+        margin: 8px 0;
+      }
+      .method p {
+        margin: 0;
+        color: #c3d1ef;
+        font-size: 0.95rem;
+      }
+      .g2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .mode h3 {
+        font-size: 1.5rem;
+        margin: 6px 0 14px;
+      }
+      .mode ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .mode li {
+        padding: 6px 0 6px 28px;
+        position: relative;
+        color: var(--muted);
+      }
+      .mode li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--electric);
+        font-weight: 700;
+      }
+      .center {
+        text-align: center;
+        margin-top: 34px;
+      }
+      .car {
+        position: relative;
+        max-width: 760px;
+        margin: auto;
+      }
+      .slides {
+        overflow: hidden;
+        border-radius: var(--r);
+      }
+      .track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .slide {
+        min-width: 100%;
+        padding: 6px;
+      }
+      .t {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+        padding: 34px;
+      }
+      .ph {
+        flex: none;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: var(--alt);
+        border: 2px dashed var(--electric);
+        display: grid;
+        place-items: center;
+        font-size: 0.7rem;
+        color: var(--muted);
+        text-align: center;
+        overflow: hidden;
+      }
+      .ph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .t q {
+        display: block;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+      }
+      .t em {
+        color: var(--electric);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.88rem;
+      }
+      .cn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        margin-top: 20px;
+      }
+      .cn button.ar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--text);
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+      .cn button.ar:hover {
+        background: var(--electric);
+        color: #fff;
+      }
+      .dots {
+        display: flex;
+        gap: 8px;
+      }
+      .dots i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--line);
+        cursor: pointer;
+      }
+      .dots i.on {
+        background: var(--electric);
+        width: 24px;
+        border-radius: 9px;
+      }
+      .faq {
+        max-width: 780px;
+        margin: auto;
+      }
+      .q {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 16px;
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      .q button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: 0;
+        color: var(--text);
+        padding: 18px 22px;
+        font:
+          600 1rem Inter,
+          sans-serif;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .q button:after {
+        content: "+";
+        font-size: 1.4rem;
+        color: var(--electric);
+        transition: transform 0.3s;
+      }
+      .q.open button:after {
+        transform: rotate(45deg);
+      }
+      .a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      .a p {
+        margin: 0;
+        padding: 0 22px 20px;
+        color: var(--muted);
+      }
+      .final {
+        background: radial-gradient(700px 400px at 20% 0, rgba(59, 130, 246, 0.55), transparent 60%), var(--navy);
+        color: #fff;
+        text-align: center;
+        padding: 90px 0;
+      }
+      .final h2 {
+        font-size: clamp(1.9rem, 4.5vw, 3rem);
+        font-weight: 800;
+        max-width: 760px;
+        margin: auto;
+      }
+      .final p {
+        color: #c3d1ef;
+        max-width: 560px;
+        margin: 16px auto 28px;
+      }
+      .quota {
+        margin-top: 16px;
+        font-size: 0.9rem;
+        color: #8bb8ff;
+      }
+      form {
+        display: grid;
+        gap: 12px;
+        max-width: 560px;
+        margin: auto;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--text);
+        font:
+          1rem Inter,
+          sans-serif;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 2px solid var(--electric);
+      }
+      footer {
+        background: var(--navy);
+        color: #b9c8e8;
+        padding: 60px 0 30px;
+        font-size: 0.93rem;
+      }
+      footer .grid {
+        grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      }
+      footer h4 {
+        color: #fff;
+        margin: 0 0 12px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      footer a {
+        display: block;
+        padding: 3px 0;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+      .copy {
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        margin-top: 36px;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 0.85rem;
+      }
+      .wa {
+        position: fixed;
+        right: 18px;
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+        z-index: 60;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+        animation: pu 2.5s infinite;
+      }
+      .wa svg {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+      }
+      @keyframes pu {
+        50% {
+          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+        }
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.7s,
+          transform 0.7s;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (max-width: 960px) {
+        .hero .wrap {
+          grid-template-columns: 1fr;
+        }
+        .vis {
+          min-height: 420px;
+        }
+        .g3 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .g4 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        footer .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .pc.pop {
+          transform: none;
+        }
+      }
+      @media (max-width: 680px) {
+        section {
+          padding: 56px 0;
+        }
+        .burger {
+          display: block;
+        }
+        .links {
+          position: absolute;
+          top: calc(68px + env(safe-area-inset-top, 0px));
+          left: 0;
+          right: 0;
+          background: var(--navy);
+          flex-direction: column;
+          padding: 20px;
+          gap: 16px;
+          display: none;
+        }
+        .links.open {
+          display: flex;
+        }
+        .g3,
+        .g4,
+        .g2 {
+          grid-template-columns: 1fr;
+        }
+        .t {
+          flex-direction: column;
+          text-align: center;
+          padding: 24px;
+        }
+        footer .grid {
+          grid-template-columns: 1fr;
+        }
+        .vcard {
+          max-width: 250px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap">
+        <a href="#top" class="logo"
+          ><img
+            src="data:image/png;base64,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"
+            alt="EasySpeak logo"
+            width="146"
+            height="160"
+          />EasySpeak</a
+        >
+        <button class="burger" id="bg" aria-label="Open menu">☰</button>
+        <div class="links" id="lk">
+          <a href="#why">Why Us</a><a href="#programs">Programs</a><a href="#facilities">Facilities</a><a href="#mode">Class Mode</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="btn btn-p" data-wa href="#">Register Now</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">EasySpeak English Course</span>
+          <h1 style="margin-top: 10px">Your English Journey <span>Starts Here.</span></h1>
+          <h3>Build Your Confidence. Improve Your Communication. Unlock Your Future.</h3>
+          <p>Learn English through interactive speaking activities, practical conversations, creative projects, and engaging learning experiences with EasySpeak English Course.</p>
+          <div class="cta"><a class="btn btn-p" href="#programs">Explore Our Programs</a><a class="btn btn-o" data-wa href="#">Register Now</a></div>
+          <div class="hl"><span>🌍 All Ages Welcome</span><span>💻 Online &amp; Offline Classes</span><span>📈 Beginner to Upper-Intermediate</span></div>
+        </div>
+        <div class="vis" aria-hidden="true">
+          <div class="vcard">
+            <div class="av" style="background: #3b82f6">K</div>
+            <div><b>Kids · Role Play</b><small>“Hello! My name is Sara.”</small></div>
+          </div>
+          <div class="vcard">
+            <div class="av" style="background: #174ea6">T</div>
+            <div><b>Teens · Discussion</b><small>“I think we should recycle more.”</small></div>
+          </div>
+          <div class="vcard">
+            <div class="av" style="background: #0b1630">A</div>
+            <div><b>Adults · Presentation</b><small>“Let me walk you through our plan.”</small></div>
+          </div>
+          <div class="vcard">
+            <div class="av" style="background: #2563eb">P</div>
+            <div><b>Podcast Project</b><small>“Welcome back to our show!”</small></div>
+          </div>
+          <div class="photo" data-img="hero:"></div>
+        </div>
+      </div>
+    </header>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">Why Choose EasySpeak?</span>
+          <h2>More Than Just an English Course.</h2>
+          <p>We don’t just teach English. We help you use it confidently in real-life situations.</p>
+        </div>
+        <div class="grid g3" id="whyG"></div>
+      </div>
+    </section>
+
+    <section id="programs" class="alt">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">Our English Programs</span>
+          <h2>Find Your Level. Discover Your Potential.</h2>
+          <p>Six programs based on the CEFR (Common European Framework of Reference for Languages).</p>
+        </div>
+        <div class="tog" id="tog"><button class="on" data-m="monthly">Monthly</button><button data-m="package">Program Package</button></div>
+        <div class="grid g3" id="lvG"></div>
+      </div>
+    </section>
+
+    <section id="facilities">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">What Will You Get?</span>
+          <h2>Everything You Need to Grow.</h2>
+          <p>Facilities may vary depending on the package you choose.</p>
+        </div>
+        <div class="grid g4 fac" id="facG"></div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">Our Learning Experience</span>
+          <h2>Learn English the Way You Use It.</h2>
+        </div>
+        <div class="grid g4" id="mtG"></div>
+      </div>
+    </section>
+
+    <section id="mode">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">Learning Mode</span>
+          <h2>Learn Your Way, Anywhere.</h2>
+        </div>
+        <div class="grid g2">
+          <div class="card mode rv">
+            <div class="photo" data-img="online:Foto kelas online"></div>
+            <h3>ONLINE CLASS</h3>
+            <ul>
+              <li>Flexible learning from home.</li>
+              <li>Interactive online sessions.</li>
+              <li>Guided speaking practice.</li>
+              <li>Digital learning materials.</li>
+            </ul>
+          </div>
+          <div class="card mode rv">
+            <div class="photo" data-img="offline:Foto kelas offline"></div>
+            <h3>OFFLINE CLASS</h3>
+            <ul>
+              <li>Face-to-face learning.</li>
+              <li>Direct interaction with teachers.</li>
+              <li>Interactive classroom activities.</li>
+              <li>Collaborative speaking projects.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="center"><a class="btn btn-p" data-wa data-msg="Assalamu’alaikum, saya ingin memilih kelas (online/offline) di EasySpeak English Course. Mohon informasinya." href="#">Choose Your Class</a></div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">How to Register</span>
+          <h2>Your Journey Starts in 4 Simple Steps.</h2>
+        </div>
+        <div class="grid g4" id="stG"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">Testimonials</span>
+          <h2>Stories of Growth and Confidence.</h2>
+        </div>
+        <div class="car">
+          <div class="slides"><div class="track" id="trk"></div></div>
+          <div class="cn">
+            <button class="ar" id="pv" aria-label="Previous">‹</button>
+            <div class="dots" id="dts"></div>
+            <button class="ar" id="nx" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="alt">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently Asked Questions.</h2>
+        </div>
+        <div class="faq" id="fq"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="sh rv">
+          <span class="eyebrow">Contact Us</span>
+          <h2>Ask Us Anything.</h2>
+          <p>Isi formulir berikut dan pesan Anda akan dikirim langsung ke WhatsApp admin.</p>
+        </div>
+        <form id="cf">
+          <input id="fn" required placeholder="Nama lengkap" /><select id="fl"></select
+          ><textarea id="fm" rows="4" placeholder="Pertanyaan atau pesan Anda"></textarea><button class="btn btn-p" style="justify-content: center">Kirim via WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>Don’t Just Learn English. Start Speaking It!</h2>
+        <p>Your confidence begins with one conversation. Join EasySpeak English Course and take the next step toward better communication.</p>
+        <a class="btn btn-l" data-wa href="#">REGISTER NOW</a>
+        <div class="quota" id="qt"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="grid">
+          <div>
+            <div class="logo" style="color: #fff">
+              <img
+                src="data:image/png;base64,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"
+                alt="EasySpeak logo"
+                width="146"
+                height="160"
+              />EasySpeak
+            </div>
+            <p style="margin: 12px 0 4px; color: #fff">Speak with Confidence, Grow with EasySpeak.</p>
+            <p style="margin: 0">English course for all ages, focused on real communication and confidence.</p>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <a href="#why">Why EasySpeak</a><a href="#facilities">Facilities</a><a href="#mode">Class Mode</a><a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h4>Our Programs</h4>
+            <div id="fp"></div>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a data-wa href="#" id="fw"></a><a id="fe" href="#"></a><a id="fi" target="_blank" rel="noopener" href="#">Instagram</a><a id="ff" target="_blank" rel="noopener" href="#">Facebook</a>
+          </div>
+        </div>
+        <div class="copy">Copyright © 2026 EasySpeak English Course.</div>
+      </div>
+    </footer>
+
+    <a class="wa" data-wa href="#" aria-label="Chat on WhatsApp"
+      ><svg viewBox="0 0 32 32">
+        <path
+          d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.6-5.5-1.600l-.4-.2-3.800 1.200 1.200-3.700-.3-.4A10.700 10.700 0 1 1 16 26.700zm5.900-8c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.800c-.3-.6.300-.6.900-1.700.1-.2 0-.4 0-.5s-.7-1.700-1-2.300-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.700 3.700 0 0 0-1.100 2.700 6.400 6.400 0 0 0 1.400 3.400c.2.200 2.500 3.900 6.100 5.400 2.300.9 3.200 1 4.300.8a3.600 3.600 0 0 0 2.400-1.700 3 3 0 0 0 .2-1.700c-.1-.2-.3-.3-.6-.4z"
+        /></svg
+    ></a>
+
+    <script>
+      /* ============ ADMIN CONFIG — edit this block only ============ */
+      const CONFIG = {
+        whatsapp: "6281911943754" /* ganti: format internasional tanpa + atau 0, mis. 628123456789 */,
+        email: "info@easyspeak.example",
+        instagram: "https://instagram.com/",
+        facebook: "https://facebook.com/",
+        defaultMessage: "Assalamu’alaikum, saya tertarik untuk mendaftar di EasySpeak English Course. Saya ingin mendapatkan informasi mengenai program, level, dan biaya kursus.",
+        /* FOTO: isi URL gambar (https://...) atau path file. Kosong = kotak placeholder.
+    Catatan: URL luar hanya tampil jika file HTML ini di-host di website Anda sendiri. */
+        images: {
+          /* Setiap foto punya slot sendiri. Isi satu per satu dengan path/URL berbeda. */
+          hero: "assets/heroo.JPG" /* foto utama (header) */,
+          online: "assets/program/Online.jpg" /* kartu Online Class */,
+          offline: "assets/program/Offline.jpg" /* kartu Offline Class */,
+          why: ["assets/why/image 1.jpg", "assets/why/image 2.jpg", "assets/why/image 3.jpg", "assets/why/image 4.jpg", "assets/why/image 5.jpg", "assets/why/image 6.jpg"] /* 6 foto kartu Why Choose */,
+          fac: [
+            "assets/fact/image1.jpg",
+            "assets/fact/image2.jpg",
+            "assets/fact/image3.jpg",
+            "assets/fact/image4.jpg",
+            "assets/fact/image5.jpg",
+            "assets/fact/image6.jpg",
+            "assets/fact/image7.jpg",
+            "assets/fact/image8.jpg",
+          ] /* 8 foto fasilitas */,
+          method: ["assets/method/speak.jpg", "assets/method/create.jpg", "assets/method/connect.jpg", "assets/method/present.jpg"],
+        } /* SPEAK, CREATE, CONNECT, PRESENT */,
+        popularLevel: "" /* isi dengan kode level, mis. "B1" — kosong = tanpa label */,
+        limitedEnrollment: false /* true jika memang ada batas kuota */,
+        /* Harga: isi angka/teks, mis. "Rp 350.000". Kosong = tampil "Hubungi admin untuk harga" */
+        prices: { A1: { monthly: "", package: "" }, A2: { monthly: "", package: "" }, B1: { monthly: "", package: "" }, "B1+": { monthly: "", package: "" }, B2: { monthly: "", package: "" }, "B2+": { monthly: "", package: "" } },
+        /* Testimoni: kosong = tampil placeholder. Format: {name,level,photo,story,progress} */
+        testimonials: [],
+        faq: [
+          ["Apakah EasySpeak menerima siswa pemula?", "Ya. Tersedia Level A1 (Beginner) untuk siswa yang baru memulai belajar bahasa Inggris."],
+          ["Apakah tersedia kelas untuk anak-anak?", "EasySpeak melayani semua usia, termasuk anak Sekolah Dasar. Hubungi admin untuk informasi kelas dan jadwal yang sesuai usia."],
+          ["Apakah tersedia kelas online dan offline?", "Ya, tersedia kelas online dan offline. Silakan pilih sesuai kebutuhan Anda."],
+          ["Bagaimana cara menentukan level bahasa Inggris?", "Pilih level yang menurut Anda sesuai, atau ikuti placement test jika diperlukan. Tim kami akan membantu menentukan level yang tepat."],
+          ["Berapa kali pertemuan dalam satu bulan?", "Jumlah pertemuan mengikuti paket dan jadwal kelas yang dipilih. Hubungi admin untuk informasi terbaru."],
+          ["Apakah siswa mendapatkan modul?", "Ya, siswa mendapatkan learning module terstruktur sesuai level CEFR."],
+          ["Apakah siswa mendapatkan sertifikat?", "Ya, e-certificate diberikan setelah menyelesaikan program sesuai ketentuan penilaian."],
+          ["Bagaimana cara melakukan pendaftaran?", "Klik tombol Register Now, hubungi admin via WhatsApp, ikuti placement test jika diperlukan, lalu mulai belajar."],
+        ],
+      };
+      const LEVELS = [
+        [
+          "A1",
+          "A1 — Beginner",
+          "Start Your English Journey.",
+          "Learn basic English vocabulary, greetings, simple expressions, and everyday conversations.",
+          ["Basic Vocabulary", "Greetings and Introductions", "Simple Grammar", "Daily Expressions", "Basic Speaking Practice"],
+        ],
+        [
+          "A2",
+          "A2 — Elementary",
+          "Build Your Communication Skills.",
+          "Develop your ability to communicate in familiar situations using simple English.",
+          ["Daily Conversations", "Describing People and Places", "Past and Future Activities", "Vocabulary Expansion", "Practical Speaking"],
+        ],
+        [
+          "B1",
+          "B1 — Intermediate",
+          "Speak More Naturally.",
+          "Improve your fluency and express opinions, experiences, and ideas with greater confidence.",
+          ["Opinion Sharing", "Storytelling", "Discussions", "Problem Solving", "Intermediate Grammar", "Fluency Development"],
+        ],
+        [
+          "B1+",
+          "B1+ — Upper Intermediate Foundation",
+          "Take Your English Further.",
+          "Develop more advanced communication skills and learn to express complex ideas more effectively.",
+          ["Critical Discussions", "Argument Development", "Advanced Vocabulary", "Paraphrasing", "Presentation Skills", "Extended Speaking"],
+        ],
+        [
+          "B2",
+          "B2 — Upper Intermediate",
+          "Communicate with Confidence.",
+          "Build strong communication skills for academic, professional, and social environments.",
+          ["Advanced Discussions", "Academic Vocabulary", "Professional Communication", "Critical Thinking", "Presentations", "Complex Grammar"],
+        ],
+        [
+          "B2+",
+          "B2+ — Advanced Communication",
+          "Express Ideas. Inspire Others.",
+          "Refine your English communication skills through advanced discussions, presentations, and real-world projects.",
+          ["Advanced Speaking Fluency", "Academic Discussions", "Professional Presentations", "Critical Analysis", "Debate and Argumentation", "Advanced Vocabulary"],
+        ],
+      ];
+      const WHY = [
+        ["🎤", "Speaking-Focused Learning", "Fokus pada praktik berbicara agar siswa terbiasa menggunakan bahasa Inggris."],
+        ["🎮", "Interactive Learning", "Belajar melalui games, discussions, role plays, dan aktivitas interaktif."],
+        ["🚀", "Project-Based Learning", "Mengembangkan kemampuan bahasa Inggris melalui proyek nyata."],
+        ["📚", "Vocabulary Development", "Memperkaya kosakata untuk meningkatkan kemampuan komunikasi."],
+        ["🎯", "Personalized Learning", "Pembelajaran disesuaikan dengan level dan perkembangan siswa."],
+        ["🌐", "Real-Life Communication", "Belajar menggunakan bahasa Inggris dalam situasi kehidupan sehari-hari."],
+      ];
+      const FAC = [
+        ["📘", "Learning Module", "Materi pembelajaran terstruktur sesuai level CEFR."],
+        ["🎓", "E-Certificate", "Sertifikat digital setelah menyelesaikan program sesuai ketentuan penilaian."],
+        ["🗣️", "Speaking Practice", "Kesempatan praktik berbicara secara aktif dalam pembelajaran."],
+        ["📊", "Learning Progress Report", "Laporan perkembangan kemampuan bahasa Inggris siswa."],
+        ["🎲", "Interactive Learning Activities", "Games, role play, discussions, storytelling, dan speaking projects."],
+        ["✍️", "Vocabulary & Grammar Materials", "Materi kosakata dan tata bahasa yang mendukung komunikasi."],
+        ["🖥️", "Online Learning Support", "Dukungan pembelajaran untuk peserta kelas online."],
+        ["🤝", "Consultation & Learning Guidance", "Bimbingan mengenai perkembangan dan kebutuhan belajar siswa."],
+      ];
+      const MT = [
+        ["🗣️", "SPEAK", "Practice real-life conversations."],
+        ["🎨", "CREATE", "Complete creative English projects."],
+        ["🤝", "CONNECT", "Build communication and teamwork skills."],
+        ["🎬", "PRESENT", "Express your ideas with confidence."],
+      ];
+      const ST = [
+        ["Choose Your Level", "Tentukan level bahasa Inggris yang sesuai."],
+        ["Contact Our Team", "Hubungi admin EasySpeak."],
+        ["Placement Test", "Ikuti tes penempatan level jika diperlukan."],
+        ["Start Learning", "Mulai perjalanan belajar bahasa Inggris."],
+      ];
+      /* ============ RENDER ============ */
+      const $ = (s) => document.querySelector(s),
+        esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      const wa = (m) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(m || CONFIG.defaultMessage)}`;
+      document.querySelectorAll("[data-wa]").forEach((a) => {
+        a.href = wa(a.dataset.msg);
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+      const ph = (u, l) => `<div class="photo">${esc(l)}${u ? `<img src="${esc(u)}" alt="${esc(l)}" loading="lazy" onerror="this.remove()">` : ""}</div>`;
+      document.querySelectorAll("[data-img]").forEach((e) => {
+        const [k, l] = e.dataset.img.split(":");
+        e.outerHTML = ph(CONFIG.images[k], l);
+      });
+      const cards = (id, arr, fn) => ($(id).innerHTML = arr.map((x, i) => fn(x, i)).join(""));
+      cards("#whyG", WHY, (x, i) => `<div class="card rv">${ph(CONFIG.images.why[i], "Foto: " + x[1])}<h3>${x[1]}</h3><p>${x[2]}</p></div>`);
+      cards("#facG", FAC, (x, i) => `<div class="card rv">${ph(CONFIG.images.fac[i], "Foto: " + x[1])}<h3>${x[1]}</h3><p>${x[2]}</p></div>`);
+      cards("#mtG", MT, (x, i) => `<div class="method rv">${ph(CONFIG.images.method[i], "Foto: " + x[1])}<b>${x[1]}</b><p>${x[2]}</p></div>`);
+      cards("#stG", ST, (x, i) => `<div class="how rv"><div class="n">${i + 1}</div><h3>${x[0]}</h3><p>${x[1]}</p></div>`);
+      let mode = "monthly";
+      function lv() {
+        cards("#lvG", LEVELS, (x) => {
+          const p = (CONFIG.prices[x[0]] || {})[mode],
+            pop = CONFIG.popularLevel === x[0];
+          return `<article class="card pc rv ${pop ? "pop" : ""}">${pop ? '<span class="badge">Most Popular</span>' : ""}<div class="lv">LEVEL ${x[0]}</div><h3>${x[1].split("— ")[1]}</h3><div class="tag">${x[2]}</div><p>${x[3]}</p><ul>${x[4].map((f) => `<li>${f}</li>`).join("")}</ul><div class="price">${p ? `<strong>${esc(p)}</strong><span>${mode === "monthly" ? "per bulan" : "per paket program"}</span>` : `<strong style="font-size:1.05rem">Hubungi admin untuk harga</strong><span>Biaya terbaru tersedia via WhatsApp</span>`}</div><a class="btn btn-p" target="_blank" rel="noopener" href="${wa(`Assalamu’alaikum, saya tertarik mendaftar di EasySpeak English Course Level ${x[1]}. Mohon informasi jadwal dan biaya (${mode === "monthly" ? "bulanan" : "paket program"}).`)}">Enroll Now</a></article>`;
+        });
+        reveal();
+      }
+      document.querySelectorAll("#tog button").forEach(
+        (b) =>
+          (b.onclick = () => {
+            document.querySelectorAll("#tog button").forEach((x) => x.classList.remove("on"));
+            b.classList.add("on");
+            mode = b.dataset.m;
+            lv();
+          }),
+      );
+      /* FAQ */
+      cards("#fq", CONFIG.faq, (x) => `<div class="q rv"><button aria-expanded="false">${esc(x[0])}</button><div class="a"><p>${esc(x[1])}</p></div></div>`);
+      document.querySelectorAll(".q button").forEach(
+        (b) =>
+          (b.onclick = () => {
+            const q = b.parentElement,
+              a = q.querySelector(".a"),
+              o = q.classList.toggle("open");
+            a.style.maxHeight = o ? a.scrollHeight + "px" : 0;
+            b.setAttribute("aria-expanded", o);
+          }),
+      );
+      /* Testimonials */
+      const T = CONFIG.testimonials.length
+        ? CONFIG.testimonials
+        : [{ ph: 1, name: "Nama Siswa", level: "Level Kursus", story: "Tempat untuk pengalaman belajar siswa di EasySpeak.", progress: "Perkembangan kemampuan bahasa Inggris siswa." }];
+      cards(
+        "#trk",
+        T,
+        (t) =>
+          `<div class="slide"><div class="card t" style="transform:none"><div class="ph">${t.photo ? `<img src="${esc(t.photo)}" alt="${esc(t.name)}">` : "Foto siswa"}</div><div><q>${esc(t.story)}</q><p style="margin:0 0 8px;color:var(--muted)">${esc(t.progress || "")}</p><em>${esc(t.name)} · ${esc(t.level)}${t.ph ? " (placeholder — isi dengan testimoni asli)" : ""}</em></div></div></div>`,
+      );
+      let ci = 0;
+      const dt = $("#dts");
+      dt.innerHTML = T.map((_, i) => `<i data-i="${i}"></i>`).join("");
+      function go(n) {
+        ci = (n + T.length) % T.length;
+        $("#trk").style.transform = `translateX(-${ci * 100}%)`;
+        dt.querySelectorAll("i").forEach((d, i) => d.classList.toggle("on", i === ci));
+      }
+      $("#pv").onclick = () => go(ci - 1);
+      $("#nx").onclick = () => go(ci + 1);
+      dt.onclick = (e) => e.target.dataset.i && go(+e.target.dataset.i);
+      go(0);
+      if (T.length > 1) setInterval(() => go(ci + 1), 6000);
+      /* Form, footer, misc */
+      $("#fl").innerHTML = '<option value="">Level yang diminati (belum tahu? pilih ini)</option>' + LEVELS.map((l) => `<option>${l[1]}</option>`).join("");
+      $("#cf").onsubmit = (e) => {
+        e.preventDefault();
+        window.open(wa(`Assalamu’alaikum, saya ${$("#fn").value}. Saya tertarik dengan EasySpeak English Course${$("#fl").value ? " Level " + $("#fl").value : ""}. ${$("#fm").value}`), "_blank", "noopener");
+      };
+      $("#fp").innerHTML = LEVELS.map((l) => `<a href="#programs">${l[1].split(" —")[0]} · ${l[1].split("— ")[1]}</a>`).join("");
+      $("#fw").textContent = "WhatsApp: +" + CONFIG.whatsapp;
+      $("#fe").textContent = CONFIG.email;
+      $("#fe").href = "mailto:" + CONFIG.email;
+      $("#fi").href = CONFIG.instagram;
+      $("#ff").href = CONFIG.facebook;
+      if (CONFIG.limitedEnrollment) $("#qt").textContent = "Limited Enrollment — Join Our Next Class!";
+      const lk = $("#lk");
+      $("#bg").onclick = () => lk.classList.toggle("open");
+      lk.onclick = (e) => e.target.tagName === "A" && lk.classList.remove("open");
+      function reveal() {
+        const io =
+          "IntersectionObserver" in window
+            ? new IntersectionObserver(
+                (es) =>
+                  es.forEach((e) => {
+                    if (e.isIntersecting) {
+                      e.target.classList.add("in");
+                      io.unobserve(e.target);
+                    }
+                  }),
+                { threshold: 0.12 },
+              )
+            : null;
+        document.querySelectorAll(".rv:not(.in)").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
+      }
+      lv();
+      reveal();
+    </script>
+  </body>
+</html>
