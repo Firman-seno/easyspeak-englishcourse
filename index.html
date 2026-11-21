@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>EasySpeak English Course</title>
-    <meta name="description" content="EasySpeak English Course: kursus bahasa Inggris untuk anak, remaja, dan dewasa. Speaking-focused, interaktif, online & offline, level A1 hingga B2+." />
+    <meta name="description" content="EasySpeak English Course" />
+    <link rel="shortcut icon" href="./assets/icon/icon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -553,19 +554,48 @@
         font-size: 0.93rem;
         margin: 0;
       }
-      .method .photo {
-        aspect-ratio: 1/1;
-        margin-bottom: 12px;
-      }
+
+      /* ===== Our Learning Experience: foto full + tahun belajar ===== */
       .method {
         background: linear-gradient(160deg, var(--navy), #10265a);
         color: #fff;
         border-radius: var(--r);
-        padding: 30px 24px;
+        padding: 0;
+        overflow: hidden;
         transition: transform 0.25s;
       }
       .method:hover {
         transform: translateY(-6px) rotate(-0.6deg);
+      }
+      .method {
+        display: flex;
+        flex-direction: column;
+      }
+      /* Semua foto punya bingkai yang sama (4:3) supaya kartu rata dan sejajar.
+         Ubah 4/3 jika ingin rasio lain, mis. 1/1 atau 3/2. */
+      .method .photo {
+        aspect-ratio: 4/3;
+        border-radius: 0;
+        margin: 0;
+      }
+      .method .photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .method .mbody {
+        padding: 20px 24px 24px;
+        flex: 1;
+      }
+      .method .mbody:empty {
+        display: none;
+      }
+      .card h3:empty,
+      .card p:empty {
+        display: none;
       }
       .method b {
         font:
@@ -573,13 +603,26 @@
           sans-serif;
         display: block;
         color: #8bb8ff;
-        margin: 8px 0;
+        margin: 0 0 6px;
       }
       .method p {
         margin: 0;
         color: #c3d1ef;
         font-size: 0.95rem;
       }
+      .method .yr {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #cfe0ff;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      /* ===== end ===== */
+
       .g2 {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -976,8 +1019,11 @@
       <div class="wrap">
         <div class="sh rv">
           <span class="eyebrow">Why Choose EasySpeak?</span>
-          <h2>More Than Just an English Course.</h2>
-          <p>We don’t just teach English. We help you use it confidently in real-life situations.</p>
+          <h2>Building Skills. Shaping Confidence. Creating Opportunities.</h2>
+          <p>
+            At EasySpeak, we help students discover their potential through meaningful English learning experiences. From everyday conversations to presentations and collaborative projects, we encourage every student to become a confident
+            and independent communicator.
+          </p>
         </div>
         <div class="grid g3" id="whyG"></div>
       </div>
@@ -988,7 +1034,10 @@
         <div class="sh rv">
           <span class="eyebrow">Our English Programs</span>
           <h2>Find Your Level. Discover Your Potential.</h2>
-          <p>Six programs based on the CEFR (Common European Framework of Reference for Languages).</p>
+          <p>
+            Discover a range of English learning programs designed to develop your skills step by step, from beginner to advanced levels. Each program provides engaging learning experiences to help you improve your communication skills and
+            speak English with confidence.
+          </p>
         </div>
         <div class="tog" id="tog"><button class="on" data-m="monthly">Monthly</button><button data-m="package">Program Package</button></div>
         <div class="grid g3" id="lvG"></div>
@@ -999,8 +1048,11 @@
       <div class="wrap">
         <div class="sh rv">
           <span class="eyebrow">What Will You Get?</span>
-          <h2>Everything You Need to Grow.</h2>
-          <p>Facilities may vary depending on the package you choose.</p>
+          <h2>More Than Just an English Course.</h2>
+          <p>
+            As an EasySpeak student, you will receive a variety of exclusive learning facilities and benefits, including learning modules, an official certificate, an EasySpeak T-shirt, and other valuable resources designed to support your
+            learning journey, enhance your English skills, and build your confidence..
+          </p>
         </div>
         <div class="grid g4 fac" id="facG"></div>
       </div>
@@ -1151,12 +1203,12 @@
       /* ============ ADMIN CONFIG — edit this block only ============ */
       const CONFIG = {
         whatsapp: "6281911943754" /* ganti: format internasional tanpa + atau 0, mis. 628123456789 */,
-        email: "info@easyspeak.example",
-        instagram: "https://instagram.com/",
-        facebook: "https://facebook.com/",
+        email: "easyspeak47@gmail.com",
+        instagram: "",
+        facebook: "",
         defaultMessage: "Assalamu’alaikum, saya tertarik untuk mendaftar di EasySpeak English Course. Saya ingin mendapatkan informasi mengenai program, level, dan biaya kursus.",
         /* FOTO: isi URL gambar (https://...) atau path file. Kosong = kotak placeholder.
-    Catatan: URL luar hanya tampil jika file HTML ini di-host di website Anda sendiri. */
+      Catatan: URL luar hanya tampil jika file HTML ini di-host di website Anda sendiri. */
         images: {
           /* Setiap foto punya slot sendiri. Isi satu per satu dengan path/URL berbeda. */
           hero: "assets/heroo.jpg" /* foto utama (header) */,
@@ -1173,14 +1225,48 @@
             "assets/fact/image7.jpg",
             "assets/fact/image8.jpg",
           ] /* 8 foto fasilitas */,
-          method: ["assets/method/speak.jpg", "assets/method/create.jpg", "assets/method/connect.jpg", "assets/method/present.jpg"],
-        } /* SPEAK, CREATE, CONNECT, PRESENT */,
+          /* Our Learning Experience: tambah path foto baru di sini, kartu baru otomatis muncul di bawahnya */
+          method: ["assets/method/img1.jpg", "assets/method/img2.jpg", "assets/method/img3.jpg", "assets/method/img4.jpg", "assets/method/img5.jpg", "assets/method/img6.jpg", "assets/method/img7.jpg", "assets/method/img8.jpg"],
+        },
+        /* Tahun belajar per foto Our Learning Experience, urutannya sama dengan foto.
+             Bisa tahun biasa ("2026") atau rentang ("2024–2025"). Foto yang belum diisi tahunnya otomatis memakai defaultYear. */
+        methodYears: ["2023", "2019", "2023", "2023", "2023", "2023"],
+        defaultYear: "2023",
         popularLevel: "" /* isi dengan kode level, mis. "B1" — kosong = tanpa label */,
         limitedEnrollment: false /* true jika memang ada batas kuota */,
         /* Harga: isi angka/teks, mis. "Rp 350.000". Kosong = tampil "Hubungi admin untuk harga" */
-        prices: { A1: { monthly: "", package: "" }, A2: { monthly: "", package: "" }, B1: { monthly: "", package: "" }, "B1+": { monthly: "", package: "" }, B2: { monthly: "", package: "" }, "B2+": { monthly: "", package: "" } },
+        prices: {
+          A1: { monthly: "Rp 350.000", package: "Rp 1.300.000" },
+          A2: { monthly: "Rp 350.000", package: "Rp 1.300.000" },
+          "A2+": { monthly: "Rp 400.000", package: "Rp 1.500.000" },
+          B1: { monthly: "Rp 425.000", package: "Rp 1.600.000" },
+          "B1+": { monthly: "Rp 450.000", package: "Rp 1.700.000" },
+          B2: { monthly: "Rp 500.000", package: "Rp 1.900.000" },
+        },
         /* Testimoni: kosong = tampil placeholder. Format: {name,level,photo,story,progress} */
-        testimonials: [],
+        testimonials: [
+          {
+            name: "Siti Nurhaliza",
+            level: "B1",
+            photo: "assets/testimonial/test1.jpg",
+            story: "Saya merasa lebih percaya diri berbicara bahasa Inggris setelah mengikuti kursus di EasySpeak. Metode pembelajarannya sangat interaktif dan menyenangkan.",
+            progress: "Dari A2 ke B1 dalam 6 bulan",
+          },
+          {
+            name: "Ahmad Fauzi",
+            level: "A2",
+            photo: "assets/testimonial/test2.jpg",
+            story: "Pengajar di EasySpeak sangat profesional dan sabar. Saya bisa memahami materi dengan mudah dan cepat.",
+            progress: "Dari A1 ke A2 dalam 4 bulan",
+          },
+          {
+            name: "Lina Marlina",
+            level: "B2",
+            photo: "assets/testimonial/test3.jpg",
+            story: "Kelas online di EasySpeak sangat fleksibel dan nyaman. Saya bisa belajar dari rumah tanpa mengurangi kualitas pembelajaran.",
+            progress: "Dari B1 ke B2 dalam 5 bulan",
+          },
+        ],
         faq: [
           ["Apakah EasySpeak menerima siswa pemula?", "Ya. Tersedia Level A1 (Beginner) untuk siswa yang baru memulai belajar bahasa Inggris."],
           ["Apakah tersedia kelas untuk anak-anak?", "EasySpeak melayani semua usia, termasuk anak Sekolah Dasar. Hubungi admin untuk informasi kelas dan jadwal yang sesuai usia."],
@@ -1197,43 +1283,43 @@
           "A1",
           "A1 — Beginner",
           "Start Your English Journey.",
-          "Learn basic English vocabulary, greetings, simple expressions, and everyday conversations.",
-          ["Basic Vocabulary", "Greetings and Introductions", "Simple Grammar", "Daily Expressions", "Basic Speaking Practice"],
+          "Students will learn to communicate using basic English in everyday situations. They will be able to introduce themselves, talk about family, describe daily activities, express likes and dislikes, and build simple sentences with greater confidence. The Lesson that students will learn :",
+          ["Accent Training", "Pronounciation Practice", "Expression in use", "Personal Information", "Family & People around me", "My Daily life", "Things I like", "Final Project (Speaking)"],
         ],
         [
           "A2",
           "A2 — Elementary",
           "Build Your Communication Skills.",
-          "Develop your ability to communicate in familiar situations using simple English.",
-          ["Daily Conversations", "Describing People and Places", "Past and Future Activities", "Vocabulary Expansion", "Practical Speaking"],
+          "Students will develop the ability to communicate in familiar situations using simple and connected sentences. They will be able to describe places, share past experiences, talk about future plans, and express their needs and preferences in everyday conversations.Develop your ability to communicate in familiar situations using simple English. The Lesson that students will learn :",
+          ["Accent Training", "Pronounciation Practice", "Expression in use", "Food & Eating Out", "Place and Direction", "Past Experiences", "Plans and Future", "Final Project (Speaking)"],
+        ],
+        [
+          "A2+",
+          "B2 — Pre Intermediate",
+          "Speak More Naturally.",
+          "Students will improve their fluency and confidence when speaking about familiar topics and personal experiences. They will be able to express opinions, explain choices, describe feelings, share stories, and participate in conversations with more natural expressions. The Lesson that students will learn :",
+          ["Accent Training", "Pronounciation Practice", "Expression in use", "Experiences and Memories", "Personality and Relationships", "Choice and Opinions", "Storytelling and Communication", "Final Project (Speaking)"],
         ],
         [
           "B1",
           "B1 — Intermediate",
-          "Speak More Naturally.",
-          "Improve your fluency and express opinions, experiences, and ideas with greater confidence.",
-          ["Opinion Sharing", "Storytelling", "Discussions", "Problem Solving", "Intermediate Grammar", "Fluency Development"],
+          "Take Your English Further.",
+          "Students will be able to communicate independently about familiar and broader topics, express opinions clearly, and support their ideas with relevant reasons and examples. They will also develop the ability to tell stories, discuss experiences, and participate in conversations in a more structured and meaningful way. The Lesson that students will learn : ",
+          ["Accent Training", "Pronounciation Practice", "Expression in use", "Education  and Learning", "Technology and Modern Life", "Health and Lifestyle", "Environment and Society", "Final Project (Speaking)"],
         ],
         [
           "B1+",
-          "B1+ — Upper Intermediate Foundation",
-          "Take Your English Further.",
-          "Develop more advanced communication skills and learn to express complex ideas more effectively.",
-          ["Critical Discussions", "Argument Development", "Advanced Vocabulary", "Paraphrasing", "Presentation Skills", "Extended Speaking"],
+          "B1+ — Intermediate Plus",
+          "Communicate with Confidence.",
+          "Students will strengthen their communication skills by expressing ideas in greater detail, analyzing information, and responding to different perspectives. They will be able to participate in discussions, deliver presentations, make decisions, and communicate more effectively in academic, social, and professional contexts. ",
+          ["Accent Training", "Pronounciation Practice", "Expression in use", "Critical Thinking & Decision Making", "Media & Information", "Culture & Global Perspectives", "Public Speaking & Persuasion", "Final Project (Speaking)"],
         ],
         [
           "B2",
           "B2 — Upper Intermediate",
-          "Communicate with Confidence.",
-          "Build strong communication skills for academic, professional, and social environments.",
-          ["Advanced Discussions", "Academic Vocabulary", "Professional Communication", "Critical Thinking", "Presentations", "Complex Grammar"],
-        ],
-        [
-          "B2+",
-          "B2+ — Advanced Communication",
           "Express Ideas. Inspire Others.",
-          "Refine your English communication skills through advanced discussions, presentations, and real-world projects.",
-          ["Advanced Speaking Fluency", "Academic Discussions", "Professional Presentations", "Critical Analysis", "Debate and Argumentation", "Advanced Vocabulary"],
+          "Students will strengthen their communication skills by expressing ideas in greater detail, analyzing information, and responding to different perspectives. They will be able to participate in discussions, deliver presentations, make decisions, and communicate more effectively in academic, social, and professional contexts.",
+          ["Accent Training", "Pronounciation Practice", "Expression in use", "Global Issues & Humanity", "Business & Professional Communication", "Debate & Argumentation", "Leadership & Final Showcase", "Final Project (Speaking)"],
         ],
       ];
       const WHY = [
@@ -1254,11 +1340,12 @@
         ["🖥️", "Online Learning Support", "Dukungan pembelajaran untuk peserta kelas online."],
         ["🤝", "Consultation & Learning Guidance", "Bimbingan mengenai perkembangan dan kebutuhan belajar siswa."],
       ];
+      /* Judul & deskripsi opsional per kartu: ["ikon", "Judul", "Deskripsi"]. Dikosongkan = hanya foto + tahun. */
       const MT = [
-        ["🗣️", "SPEAK", "Practice real-life conversations."],
-        ["🎨", "CREATE", "Complete creative English projects."],
-        ["🤝", "CONNECT", "Build communication and teamwork skills."],
-        ["🎬", "PRESENT", "Express your ideas with confidence."],
+        ["🗣️", "", ""],
+        ["🎨", "", ""],
+        ["🤝", "", ""],
+        ["🎬", "", ""],
       ];
       const ST = [
         ["Choose Your Level", "Tentukan level bahasa Inggris yang sesuai."],
@@ -1281,16 +1368,22 @@
         e.outerHTML = ph(CONFIG.images[k], l);
       });
       const cards = (id, arr, fn) => ($(id).innerHTML = arr.map((x, i) => fn(x, i)).join(""));
-      cards("#whyG", WHY, (x, i) => `<div class="card rv">${ph(CONFIG.images.why[i], "Foto: " + x[1])}<h3>${x[1]}</h3><p>${x[2]}</p></div>`);
-      cards("#facG", FAC, (x, i) => `<div class="card rv">${ph(CONFIG.images.fac[i], "Foto: " + x[1])}<h3>${x[1]}</h3><p>${x[2]}</p></div>`);
-      cards("#mtG", MT, (x, i) => `<div class="method rv">${ph(CONFIG.images.method[i], "Foto: " + x[1])}<b>${x[1]}</b><p>${x[2]}</p></div>`);
+      /* Jumlah kartu = jumlah foto (atau jumlah teks, mana yang lebih banyak). Tambah foto di CONFIG.images -> kartu baru otomatis muncul. */
+      const auto = (arr, imgs) => Array.from({ length: Math.max(arr.length, (imgs || []).length) }, (_, i) => arr[i] || ["", "", "", ""]);
+      const lab = (x) => (x[1] ? "Foto: " + x[1] : "Foto");
+      cards("#whyG", auto(WHY, CONFIG.images.why), (x, i) => `<div class="card rv">${ph(CONFIG.images.why[i], lab(x))}<h3>${x[1]}</h3><p>${x[2]}</p></div>`);
+      cards("#facG", auto(FAC, CONFIG.images.fac), (x, i) => `<div class="card rv">${ph(CONFIG.images.fac[i], lab(x))}<h3>${x[1]}</h3><p>${x[2]}</p></div>`);
+      cards("#mtG", auto(MT, CONFIG.images.method), (x, i) => {
+        const yr = (CONFIG.methodYears || [])[i] || CONFIG.defaultYear;
+        return `<div class="method rv">${ph(CONFIG.images.method[i], lab(x))}<div class="mbody">${x[1] ? `<b>${x[1]}</b>` : ""}${x[2] ? `<p>${x[2]}</p>` : ""}${yr ? `<span class="yr">📅 Tahun Belajar ${esc(yr)}</span>` : ""}</div></div>`;
+      });
       cards("#stG", ST, (x, i) => `<div class="how rv"><div class="n">${i + 1}</div><h3>${x[0]}</h3><p>${x[1]}</p></div>`);
       let mode = "monthly";
       function lv() {
         cards("#lvG", LEVELS, (x) => {
           const p = (CONFIG.prices[x[0]] || {})[mode],
             pop = CONFIG.popularLevel === x[0];
-          return `<article class="card pc rv ${pop ? "pop" : ""}">${pop ? '<span class="badge">Most Popular</span>' : ""}<div class="lv">LEVEL ${x[0]}</div><h3>${x[1].split("— ")[1]}</h3><div class="tag">${x[2]}</div><p>${x[3]}</p><ul>${x[4].map((f) => `<li>${f}</li>`).join("")}</ul><div class="price">${p ? `<strong>${esc(p)}</strong><span>${mode === "monthly" ? "per bulan" : "per paket program"}</span>` : `<strong style="font-size:1.05rem">Hubungi admin untuk harga</strong><span>Biaya terbaru tersedia via WhatsApp</span>`}</div><a class="btn btn-p" target="_blank" rel="noopener" href="${wa(`Assalamu’alaikum, saya tertarik mendaftar di EasySpeak English Course Level ${x[1]}. Mohon informasi jadwal dan biaya (${mode === "monthly" ? "bulanan" : "paket program"}).`)}">Enroll Now</a></article>`;
+          return `<article class="card pc rv ${pop ? "pop" : ""}">${pop ? '<span class="badge">Most Popular</span>' : ""}<div class="lv">LEVEL ${x[0]}</div><h3>${x[1].split("— ")[1]}</h3><div class="tag">${x[2]}</div><p>${x[3]}</p><ul>${x[4].map((f) => `<li>${f}</li>`).join("")}</ul><div class="price">${p ? `<strong>${esc(p)}</strong><span>${mode === "monthly" ? "/ bulan" : "/ 4 bulan"}</span>` : `<strong style="font-size:1.05rem">Hubungi admin untuk harga</strong><span>Biaya terbaru tersedia via WhatsApp</span>`}</div><a class="btn btn-p" target="_blank" rel="noopener" href="${wa(`Assalamu’alaikum, saya tertarik mendaftar di EasySpeak English Course Level ${x[1]}. Mohon informasi jadwal dan biaya (${mode === "monthly" ? "bulanan" : "paket program"}).`)}">Enroll Now</a></article>`;
         });
         reveal();
       }
